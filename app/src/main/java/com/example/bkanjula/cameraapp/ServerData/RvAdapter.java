@@ -38,6 +38,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder>{
     public void onBindViewHolder(@NonNull RvAdapter.ViewHolder viewHolder, int i) {
         viewHolder.tv_name.setText(restaurantItems.get(i).getItemname());
         viewHolder.tv_cost.setText(restaurantItems.get(i).getCost() );
+        viewHolder.tv_name.setSelected(true);
         String url = "http://87.106.210.241:10088/";
         Picasso.with(context).load(url+restaurantItems.get(i).getImagepath()).error(R.mipmap.ic_launcher).resize(150,150).into(viewHolder.iv_image);
 

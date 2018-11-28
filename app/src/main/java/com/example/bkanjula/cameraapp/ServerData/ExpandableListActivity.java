@@ -24,7 +24,6 @@ import butterknife.ButterKnife;
 
 public class ExpandableListActivity extends AppCompatActivity {
 
-
 //    @BindView(R.id.expandableListView)
 //    ExpandableListView list_item;
 //    HashMap<Categories, List<SubCategories>> expandablelist ;
@@ -48,7 +47,6 @@ public class ExpandableListActivity extends AppCompatActivity {
     ArrayList<String> sub_cate = new ArrayList<>();
 
     RvAdapter rvAdapter;
-    String sub;
 
 
     @Override
@@ -73,6 +71,7 @@ public class ExpandableListActivity extends AppCompatActivity {
 
         arrayAdapter = new ArrayAdapter<String>(ExpandableListActivity.this, android.R.layout.simple_list_item_1, cate);
         spinner.setAdapter(arrayAdapter);
+        shimmerFrameLayout.stopShimmerAnimation();
 //        if(categories != null) {
 //            expandableListAdapter = new CustomExpandableListAdapter(this, categories);
 //            list_item.setAdapter(expandableListAdapter);
@@ -80,8 +79,21 @@ public class ExpandableListActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                shimmerFrameLayout.startShimmer();
+
+
+                if(position == 0){
+
+                    shimmerFrameLayout.stopShimmerAnimation();
+                    shimmerFrameLayout.setVisibility(View.GONE);
+
+                }
+
                 if (position != 0) {
+
+                    shimmerFrameLayout.setVisibility(View.VISIBLE);
+                    shimmerFrameLayout.startShimmerAnimation();
+                    shimmerFrameLayout.setDuration(500);
+
 
                     subCategories = (categories.get(position - 1).getSubcategories());
                     sub_cate.clear();
@@ -91,7 +103,6 @@ public class ExpandableListActivity extends AppCompatActivity {
                     arrayAdapter_sub = new ArrayAdapter<>(ExpandableListActivity.this, android.R.layout.simple_list_item_1, sub_cate);
                     spinner_sub.setAdapter(arrayAdapter_sub);
 
-
                     spinner_sub.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -99,9 +110,8 @@ public class ExpandableListActivity extends AppCompatActivity {
                             restaurantItems = (subCategories.get(position).getRestaurantItems());
                             rvAdapter = new RvAdapter(ExpandableListActivity.this, restaurantItems);
                             recyclerView.setAdapter(rvAdapter);
-                            shimmerFrameLayout.stopShimmer();
-
-
+                            shimmerFrameLayout.stopShimmerAnimation();
+                            shimmerFrameLayout.setVisibility(View.GONE);
 
                         }
 
@@ -112,15 +122,28 @@ public class ExpandableListActivity extends AppCompatActivity {
                     });
 
                 }
-
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
+
         });
 
 
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        shimmerFrameLayout.startShimmerAnimation();
+        shimmerFrameLayout.setDuration(500);
+    }
+
+    @Override
+    protected void onPause() {
+        shimmerFrameLayout.stopShimmerAnimation();
+        super.onPause();
     }
 }

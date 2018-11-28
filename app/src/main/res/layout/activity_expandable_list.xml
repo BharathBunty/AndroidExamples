@@ -19,39 +19,56 @@
     <com.facebook.shimmer.ShimmerFrameLayout
         android:id="@+id/shimmer_view_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:auto_start="false">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Spinner
-                android:id="@+id/spinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp">
-
-            </Spinner>
-
-            <Spinner
-                android:id="@+id/spinner_sub"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp">
-
-            </Spinner>
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler_view_food"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp">
-
-            </android.support.v7.widget.RecyclerView>
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/reciepe_placeholder_list" />
+            <include layout="@layout/reciepe_placeholder_list" />
+            <include layout="@layout/reciepe_placeholder_list" />
+            <include layout="@layout/reciepe_placeholder_list" />
+            <include layout="@layout/reciepe_placeholder_list" />
+            <include layout="@layout/reciepe_placeholder_list" />
+            <include layout="@layout/reciepe_placeholder_list" />
         </LinearLayout>
 
     </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/skin"
+            android:layout_margin="20dp">
+
+        </Spinner>
+
+        <Spinner
+            android:id="@+id/spinner_sub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/skin"
+            android:layout_margin="20dp">
+
+        </Spinner>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_food"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
 
 </LinearLayout>
