@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Dialogs.DialogActivity">
+
+    <Button
+        android:id="@+id/button_date_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/date_picker"
+        android:background="@drawable/shape"
+        android:layout_margin="30dp"/>
+
+    <Button
+        android:id="@+id/button_time_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/time_picker"
+        android:background="@drawable/shape"
+        android:layout_margin="30dp"/>
+
+    <Button
+        android:id="@+id/button_mutliplechoice_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/choice_picker"
+        android:background="@drawable/shape"
+        android:layout_margin="30dp"/>
+
+    <Button
+        android:id="@+id/button_fullscreen_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Fullscreen_picker"
+        android:background="@drawable/shape"
+        android:layout_margin="30dp"/>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">CameraApp</string>
+    <string name="pick">Pick</string>
+    <string name="capture">Capture</string>
+    <string name="next">next</string>
+    <string name="password">Password*</string>
+    <string name="safedocs">SafeDocs</string>
+    <string name="button_login">Login</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="or">--------------------------------- OR --------------------------------</string>
+    <string name="email">Email*</string>
+    <string name="g_sign_in_with_google">G+ Sign in with Google</string>
+    <string name="new_to_safedocs_signup">New to SafeDocs? Signup</string>
+    <string name="employee">Employee Id</string>
+    <string name="employee_n">Employee Name</string>
+    <string name="Previous">Previous</string>
+    <string name="address">Address*</string>
+    <string name="plotno">Plot No*</string>
+    <string name="street">Street*</string>
+    <string name="Area">Area*</string>
+    <string name="submit">Submit</string>
+    <string name="name">Name</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_submit">Submit</string>
+    <string name="hint_body">Job</string>
+    <string name="hint_name">name</string>
+    <string name="title_enter_post">Enter Text</string>
+    <string name="appbar_scrolling_view_behavior">scrolling</string>
+    <string name="slidingtabsusingviewpager">SlidingTabsUsingViewPager</string>
+    <string name="title_post">Post</string>
+    <string name="title_get">Get</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Welcome</string>
+    <string name="nav_header_subtitle">English</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="date_picker">Date Picker</string>
+    <string name="time_picker">Time Picker</string>
+    <string name="choice_picker">Choice Picker</string>
+    <string name="Fullscreen_picker">Full Screen Picker</string>
+</resources>

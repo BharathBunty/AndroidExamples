@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:orientation="vertical"
+tools:context=".SafeDocsLogin.SafeDocsLoginActivity">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/image_width"
+    android:layout_marginLeft="@dimen/margin"
+    android:layout_marginRight="@dimen/margin"
+    android:layout_marginTop="@dimen/margin"
+    android:text="@string/safedocs"
+    android:textSize="@dimen/logo_text_size"
+    android:textColor="@android:color/black"
+    android:textAlignment="center"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin"
+    android:layout_marginRight="@dimen/margin"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textPassword"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+</LinearLayout>
+
+<Button
+    android:id="@+id/button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/start_margin"
+    android:layout_marginEnd="@dimen/margin"
+    android:layout_marginTop="@dimen/top_margin"
+    android:textAllCaps="false"
+    android:text="@string/button_login"
+    android:textColor="@android:color/white"
+    android:background="@android:color/holo_blue_dark"/>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/forget_password"
+    android:textColor="@android:color/black"
+    android:layout_marginTop="@dimen/top_margin"
+    android:layout_marginStart="@dimen/margin"
+    android:layout_marginEnd="@dimen/margin"/>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/or"
+    android:textColor="@android:color/black"
+    android:layout_marginTop="@dimen/top_margin"
+    android:layout_marginStart="@dimen/margin"
+    android:layout_marginEnd="@dimen/margin"/>
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin"
+    android:layout_marginEnd="@dimen/margin"
+    android:layout_marginTop="@dimen/top_margin"
+    android:text="@string/g_sign_in_with_google"
+    android:textAllCaps="false"
+    android:textSize="@dimen/text_size"
+    android:textColor="@android:color/white"
+    android:background="@android:color/holo_red_light"/>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/new_to_safedocs_signup"
+    android:textAlignment="center"
+    android:textSize="@dimen/text_size"
+    android:textColor="@android:color/black"
+    android:layout_marginTop="@dimen/top_margin"
+    android:layout_marginStart="@dimen/margin"
+    android:layout_marginEnd="@dimen/margin"/>
+
+</LinearLayout>
