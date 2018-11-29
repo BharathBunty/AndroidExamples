@@ -37,10 +37,10 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull RvAdapter.ViewHolder viewHolder, int i) {
         viewHolder.tv_name.setText(restaurantItems.get(i).getItemname());
-        viewHolder.tv_cost.setText(restaurantItems.get(i).getCost() );
         viewHolder.tv_name.setSelected(true);
+//        viewHolder.tv_cost.setText(restaurantItems.get(i).getCost() );
         String url = "http://87.106.210.241:10088/";
-        Picasso.with(context).load(url+restaurantItems.get(i).getImagepath()).error(R.mipmap.ic_launcher).resize(150,150).into(viewHolder.iv_image);
+        Picasso.with(context).load(url+restaurantItems.get(i).getImagepath()).error(R.mipmap.ic_launcher).into(viewHolder.iv_image);
 
 
     }
@@ -53,15 +53,16 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder>{
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         private TextView tv_name;
-        private TextView tv_cost;
+//        private TextView tv_cost;
         private ImageView iv_image;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             tv_name = itemView.findViewById(R.id.textView_itemName);
-            tv_cost = itemView.findViewById(R.id.textView_cost);
+//            tv_cost = itemView.findViewById(R.id.textView_cost);
             iv_image = itemView.findViewById(R.id.imageView);
+            tv_name.setSelected(true);
         }
     }
 }

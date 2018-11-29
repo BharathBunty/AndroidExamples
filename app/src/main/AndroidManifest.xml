@@ -76,7 +76,8 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".ServerData.ExpandableListActivity"></activity>
+        <activity android:name=".ServerData.ExpandableListActivity" />
+        <activity android:name=".ServerData.HorizontalScrollActivity"></activity>
     </application>
 
 </manifest>
