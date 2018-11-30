@@ -54,13 +54,13 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".ServerData.ListActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".ServerData.ListActivity"/>
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
 
         <service android:name=".PushNotificationExample.FireBaseInstanceIDService">
             <intent-filter>
@@ -77,7 +77,18 @@
         </service>
 
         <activity android:name=".ServerData.ExpandableListActivity" />
-        <activity android:name=".ServerData.HorizontalScrollActivity"></activity>
+        <activity android:name=".ServerData.HorizontalScrollActivity" />
+        <activity android:name=".FreeChat.ChatLogin">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".FreeChat.ChatRegister" />
+        <activity android:name=".FreeChat.ChatHome" />
+        <activity android:name=".FreeChat.ChatUser" />
+        <activity android:name=".FreeChat.ChatNewMessage"></activity>
     </application>
 
 </manifest>

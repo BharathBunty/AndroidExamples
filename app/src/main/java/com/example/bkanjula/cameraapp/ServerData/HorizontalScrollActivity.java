@@ -32,6 +32,7 @@ public class HorizontalScrollActivity extends AppCompatActivity {
     ArrayList<RestaurantItems> nonveg = new ArrayList<>();
 
     RvAdapter rvAdapter;
+    int  j =0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,18 +53,18 @@ public class HorizontalScrollActivity extends AppCompatActivity {
         recyclerView_veg.setLayoutManager(linearLayoutManager_veg); // set LayoutManager to RecyclerView
         recyclerView_veg.setHasFixedSize(true);
 
-        textView_veg.setText(categories.get(0).getName());
-        textView_non.setText(categories.get(1).getName());
+        textView_veg.setText(categories.get(j).getName());
+        textView_non.setText(categories.get(j+1).getName());
 
-        for (int i = 0; i < categories.get(0).getSubcategories().size(); i++) {
-            veg.addAll(categories.get(0).getSubcategories().get(i).getRestaurantItems());
+        for (int i = 0; i < categories.get(j).getSubcategories().size(); i++) {
+            veg.addAll(categories.get(j).getSubcategories().get(i).getRestaurantItems());
         }
 
         rvAdapter = new RvAdapter(HorizontalScrollActivity.this, veg);
         recyclerView_veg.setAdapter(rvAdapter);
 
-        for (int i = 0; i < categories.get(1).getSubcategories().size(); i++) {
-            nonveg.addAll(categories.get(1).getSubcategories().get(i).getRestaurantItems());
+        for (int i = 0; i < categories.get(j+1).getSubcategories().size(); i++) {
+            nonveg.addAll(categories.get(j+1).getSubcategories().get(i).getRestaurantItems());
         }
 
         rvAdapter = new RvAdapter(HorizontalScrollActivity.this, nonveg);

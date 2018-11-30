@@ -10,6 +10,8 @@
     <string name="or">--------------------------------- OR --------------------------------</string>
     <string name="email">Email*</string>
     <string name="g_sign_in_with_google">G+ Sign in with Google</string>
+    <string name="g_sign_in">G+ Sign in </string>
+    <string name="f_sign_in">f  Log in </string>
     <string name="new_to_safedocs_signup">New to SafeDocs? Signup</string>
     <string name="employee">Employee Id</string>
     <string name="employee_n">Employee Name</string>
@@ -46,4 +48,13 @@
     <string name="time_picker">Time Picker</string>
     <string name="choice_picker">Choice Picker</string>
     <string name="Fullscreen_picker">Full Screen Picker</string>
+    <string name="freechat">FreeChat</string>
+    <string name="new_to_FreeChat_signup">New to FreeChat ? SignUp</string>
+    <string name="username_chat">Username*</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="register">Register</string>
+    <string name="no_users_found">No users found!</string>
+    <string name="write_a_message">Write a message...</string>
+    <string name="enter_contact">Enter Contact</string>
 </resources>
