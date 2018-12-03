@@ -14,6 +14,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -54,13 +56,14 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".ServerData.ListActivity"/>
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+        <activity android:name=".ServerData.ListActivity" />
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        <!--</activity>-->
+
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
 
         <service android:name=".PushNotificationExample.FireBaseInstanceIDService">
             <intent-filter>
@@ -79,16 +82,37 @@
         <activity android:name=".ServerData.ExpandableListActivity" />
         <activity android:name=".ServerData.HorizontalScrollActivity" />
         <activity android:name=".FreeChat.ChatLogin">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".FreeChat.ChatRegister" />
+        <activity android:name=".FreeChat.ChatHome" />
+        <activity android:name=".FreeChat.ChatUser" />
+        <activity android:name=".FreeChat.ChatNewMessage" />
+        <activity android:name=".LoadingJson.JsonActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+
+        </activity>
+        <activity android:name=".LoadingJson.AudioActivity">
+        </activity>
+        <activity android:name=".LoadingJson.Text2Speech">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FreeChat.ChatRegister" />
-        <activity android:name=".FreeChat.ChatHome" />
-        <activity android:name=".FreeChat.ChatUser" />
-        <activity android:name=".FreeChat.ChatNewMessage"></activity>
     </application>
 
 </manifest>
