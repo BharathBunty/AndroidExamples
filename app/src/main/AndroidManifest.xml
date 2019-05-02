@@ -21,7 +21,6 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:allowBackup="true"
         android:configChanges="keyboard|keyboardHidden|orientation"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -29,16 +28,23 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
         <activity android:name=".LoginApp.HomeActivity">
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
         </activity>
-        <activity android:name=".CameraphotoApp.MainActivity" />
+        <activity android:name=".CameraphotoApp.MainActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
         <activity android:name=".CameraphotoApp.Main2Activity" />
         <activity android:name=".SafeDocsLogin.SafeDocsLoginActivity" />
         <activity android:name=".LoginApp.EmpDetailActivity" />
@@ -49,12 +55,12 @@
         <activity android:name=".Retrofit.NavigationActivity" />
         <activity android:name=".Dialogs.DialogActivity">
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
 
 
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
         </activity>
         <activity android:name=".ServerData.ListActivity" />
         <!-- <intent-filter> -->
@@ -83,12 +89,9 @@
         <activity android:name=".ServerData.HorizontalScrollActivity" />
         <activity android:name=".FreeChat.ChatLogin">
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
 
 
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
+
         </activity>
         <activity android:name=".FreeChat.ChatRegister" />
         <activity android:name=".FreeChat.ChatHome" />
@@ -98,20 +101,19 @@
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
 
         </activity>
-        <activity android:name=".LoadingJson.AudioActivity">
-        </activity>
-        <activity android:name=".LoadingJson.Text2Speech">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".LoadingJson.AudioActivity"/>
+        <activity android:name=".LoadingJson.Text2Speech"/>
+        <activity android:name=".VideoView.VideoActivity"
+            android:screenOrientation="landscape">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
     </application>
 

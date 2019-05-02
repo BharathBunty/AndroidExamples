@@ -74,10 +74,10 @@ public class HomeActivity extends AppCompatActivity implements OnItemClickListen
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        Intent intent = new Intent(HomeActivity.this, AddressActivity.class);
-        startActivity(intent);
-        finish();
+//        super.onBackPressed();
+//        Intent intent = new Intent(HomeActivity.this, AddressActivity.class);
+//        startActivity(intent);
+//        finish();
     }
 
 
